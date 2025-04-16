@@ -6,4 +6,30 @@
   background-size: cover;
 }
 
+.jumbotron h1 {
+  background-image: linear-gradient(
+    60deg in oklch longer hue,
+    oklch(0.9 0.1 360deg),
+    oklch(0.9 0.1 0deg)
+  );
+  background-position: 200% 0%;
+  background-repeat: repeat;
+  background-size: 200% 100%;
+  background-clip: text;
+  color: transparent;
+
+  animation-name: anim-text;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-direction: reverse;
+  animation-iteration-count: infinite;
+
+  -webkit-text-stroke: 1px oklch(0.7 0.2 var(--hue) / 0.3);
+}
+
+@keyframes anim-text {
+  100% {
+    background-position: -200% 0%;
+  }
+}
 
